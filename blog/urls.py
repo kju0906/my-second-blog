@@ -3,5 +3,14 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
+    url(r'^$', views.home, name='home'),
+    url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
+    url(r'^post/about/$', views.about, name='about'),
+    url(r'^post/blog_single/$', views.blog_single, name='blog_single'),
+    url(r'^post/blog/$', views.blog, name='blog'),
+    url(r'^post/contact/$', views.contact, name='contact'),
+    url(r'^post/features/$', views.features, name='features'),
+    # url(r'^post/home/$', views.post_new, name='home'),
+    url(r'^post/portfolio/$', views.portfolio, name='portfolio'),
+    url(r'^post/project_sample/$', views.project_sample, name='project_sample'),
 ]
